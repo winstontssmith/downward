@@ -463,6 +463,16 @@ create_fast_downward_library(
 )
 
 create_fast_downward_library(
+    NAME plugin_inference
+    HELP "Experimental inference-based actions search"
+    SOURCES
+        search_algorithms/plugin_inference
+    DEPENDS
+        eager_search
+        search_common
+)
+
+create_fast_downward_library(
     NAME plugin_eager_greedy
     HELP "Eager greedy best-first search"
     SOURCES
